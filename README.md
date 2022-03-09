@@ -6,7 +6,7 @@
 
 <h1 align="center">Conversor real para dólar</h1>
 <br>
-<h2 align="center"><a href="https://romulo-sobrinho.github.io/Calculadora_media/" target="__blank">Clique aqui e acesse o preview web</a></h2>
+<h2 align="center"><a href="https://romulo-sobrinho.github.io/Conversor-moeda/" target="__blank">Clique aqui e acesse o preview web</a></h2>
 <br>
 
 <p align="center">Projeto criado após o 1º dia da Imersão DEV Alura</p>
