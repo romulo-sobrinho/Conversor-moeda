@@ -1,0 +1,247 @@
+/*Nunito*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,300&display=swap');
+
+/*Roboto*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+/*Ubuntu*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/*Lora*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+
+/*Merriweather*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
+/*Roboto monospace*/
+
+@import url('https://fonts.googleapis.com/css2?family=**Roboto+Mono:ital,wght@0,100;0,200;0,400;0,600;0,700;1,200;1,400;1,700**&display=swap');
+
+
+:root {
+  --max-width: 1200px;
+  --text-menu: 'Lora', serif;
+  --text-h2: 'Merriweather Sans', sans-serif;
+  --text-name: 'Ubuntu', sans-serif;
+  --text-card: 'Roboto Mono', monospace;
+  --text-header: 'Ubuntu', sans-serif;
+  --text-primary: 'Nunito', sans-serif;
+  --text-button: 'Roboto', sans-serif;
+  --text-title-page: 'Roboto Mono', monospace;
+  --font-size-html: 62.5%;
+  --font-size-body: 1.6rem;
+  --font-size-header: clamp(2rem, 3vw + 0.1rem, 3rem);
+  --font-size-title-page: clamp(2.5rem, 3vw + 0.1rem, 3rem);
+  --color-title-page: #000000;
+  --color-header: #FFFFFF;
+  --color-card: rgb(0, 0, 0);
+  --color-card-hover: #FFFFFF;
+  --color-card-resultado: #000000;
+  --color-card-button: #FFFFFF;
+  --background-color-btn-banner: linear-gradient(225deg,#FFAF00 0%,#FE4D1B 48.15%,#E70154 100%);
+  --background-color-btn-projetos: linear-gradient(29.83deg,#1F95FD 0%,#4FE8E4 100%);
+  --background-color-pink: linear-gradient(29.83deg,#ff0084 0%,#33001b 100%);
+  --background-color-gray: #f9fbfc;
+  --background-color-card: #f9fbfc;
+  --box-shadow-card: 5px 5px 15px 1px #C0C5CE;
+  --border-radius: 0.8rem;
+  --padding-sessao-header: 4rem 1rem 1rem 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  font-size: var(--font-size-html);
+}
+
+body {
+  background-color: pink;
+  font-size: var(--font-size-body);
+  font-family: var(--text-primary);
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template: "header"   auto
+                 "main"     1fr  
+                 "footer"   auto
+                / 1fr;
+}
+
+.header {
+  background: var(--background-color-pink);
+  grid-area: header;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container-header h1 {
+  font-size: var(--font-size-header);
+  color: var(--color-header);
+}
+
+.img-logo {
+  height: 3rem;
+  animation: girar 1s linear;
+}
+
+.img-alura {
+  height: 2rem;
+}
+
+.main {
+  background: var(--background-color-gray);
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.main > h2 {
+  font-size: var(--font-size-title-page);
+  font-family: var(--text-h2);
+  color: var(--color-title-page);
+}
+
+.card {
+  width: 28rem;
+  height: 8rem;
+  cursor: pointer;
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color-card);
+  box-shadow: var(--box-shadow-card);
+  color: var(--color-card);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.6s;
+}
+
+.card:hover {
+  background: var(--background-color-pink);
+  color: var(--color-card-hover);
+  animation: expandir 0.4s linear forwards;
+}
+
+.card:hover .img-moeda {
+  filter: grayscale(1);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+#card-resultado {
+  width: 28rem;
+  height: 34rem;
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color-card);
+  box-shadow: var(--box-shadow-card);
+  color: var(--color-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.6s;
+  display: none;
+}
+
+.card-resultado-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.padrao-input {
+  width: 100%;
+  height: 3.5rem;
+  border: 1px solid #ff0084;
+  border-radius: var(--border-radius);
+  color: var(--color-card-resultado);
+  text-align: center;
+}
+
+.padrao-button {
+  width: 100%;
+  height: 3.5rem;
+  background: var(--background-color-pink);
+  border-radius: var(--border-radius);
+  color: var(--color-card-button);
+  text-align: center;
+  cursor: pointer;
+}
+
+.img-moeda {
+  height: 5rem;
+  transition: all 0.6s;
+}
+
+.footer {
+  background: var(--background-color-pink);
+  grid-area: footer;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-footer {
+  height: 4rem;
+}
+
+
+/*Animações*/
+@keyframes expandir {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
