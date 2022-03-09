@@ -39,7 +39,7 @@
   
 ## Preview
 
-![Conversor_moeda](https://user-images.githubusercontent.com/68918326/157361660-bc4b6584-5756-4df7-b213-5875dfb22d68.gif)
+![Conversor_moeda](https://user-images.githubusercontent.com/68918326/157362843-556a7a99-c12e-4b0e-b8d1-5867e1dabef9.gif)
 
 
 <hr>
